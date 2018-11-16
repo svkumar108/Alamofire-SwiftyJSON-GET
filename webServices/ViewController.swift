@@ -26,28 +26,26 @@ class ViewController: UIViewController {
     func getData(){
         
         
-        let myURL = "http://bharathiyam.org/RestserviceAPI/Gettempledescription/1/4"
+        let myURL = "https://www.brninfotech.com/pulse/modules/admin/ValidateLogin.php"
+        let params : [String : Any] = ["funcName" : "verifyLogin", "registeredEmail" : "svkumar108@gmail.com", "registeredPassword" : "1993/sep/10"]
         
-        Alamofire.request(myURL, method: .get).responseJSON {
+        Alamofire.request(myURL, method: .post, parameters: params).responseJSON {
             response in
             if response.result.isSuccess {
                 
                 let data : JSON = JSON(response.result.value!)
-                let imgData = data["TempleDescriptionResult"]["Gallery"][0]["event_image"].string
-            
-              
+                let imgData = data["profileImagePath"].string
                 
-                let myimage : UIImage = UIImage(data: try! Data(contentsOf: URL(string: imgData!)!))!
+                //let myImg:UIImage = UIImage(data:  try! Data(contentsOf: URL(string: imgData!)!))!
+               // self.imgView.image = myImg
                 
-              self.imgView.image = myimage
-                
-                
+           //     let imagPath = URL(fileURLWithPath: imgData!)
+             //  let myImg = UIImage(contentsOfFile: imgData!)
+             //   self.imgView.image = myImg
                 print(data)
                 
-                
-            }else {
+            }else{
                 print("error")
-                //siva kumar
             }
         }
         
