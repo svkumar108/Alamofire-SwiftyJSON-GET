@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55E11707B28DC9214BBC988B /* Pods_webServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC8A4EE019950A2814E5D0C /* Pods_webServices.framework */; };
 		DD0A0468219DB4630027C7D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0467219DB4630027C7D3 /* AppDelegate.swift */; };
 		DD0A046A219DB4630027C7D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0469219DB4630027C7D3 /* ViewController.swift */; };
 		DD0A046D219DB4640027C7D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0A046B219DB4640027C7D3 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A02DD72F7D62582FF6CA491 /* Pods-webServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-webServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-webServices/Pods-webServices.debug.xcconfig"; sourceTree = "<group>"; };
+		A62256FE4AA680CD59597F86 /* Pods-webServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-webServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-webServices/Pods-webServices.release.xcconfig"; sourceTree = "<group>"; };
 		DD0A0464219DB4630027C7D3 /* webServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0A0467219DB4630027C7D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD0A0469219DB4630027C7D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		DD0A046E219DB4660027C7D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD0A0471219DB4660027C7D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD0A0473219DB4660027C7D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC8A4EE019950A2814E5D0C /* Pods_webServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_webServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E11707B28DC9214BBC988B /* Pods_webServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84BC0489B899BFEE55614B10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A02DD72F7D62582FF6CA491 /* Pods-webServices.debug.xcconfig */,
+				A62256FE4AA680CD59597F86 /* Pods-webServices.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4C78B1249A346D973AC58CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEC8A4EE019950A2814E5D0C /* Pods_webServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD0A045B219DB4630027C7D3 = {
 			isa = PBXGroup;
 			children = (
 				DD0A0466219DB4630027C7D3 /* webServices */,
 				DD0A0465219DB4630027C7D3 /* Products */,
+				84BC0489B899BFEE55614B10 /* Pods */,
+				A4C78B1249A346D973AC58CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD0A0476219DB4660027C7D3 /* Build configuration list for PBXNativeTarget "webServices" */;
 			buildPhases = (
+				D5C3ADCD946DA70C72234E6C /* [CP] Check Pods Manifest.lock */,
 				DD0A0460219DB4630027C7D3 /* Sources */,
 				DD0A0461219DB4630027C7D3 /* Frameworks */,
 				DD0A0462219DB4630027C7D3 /* Resources */,
+				9D47C86FC0D1935EAE654D15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D47C86FC0D1935EAE654D15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-webServices/Pods-webServices-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-webServices/Pods-webServices-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5C3ADCD946DA70C72234E6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-webServices-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD0A0460219DB4630027C7D3 /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		DD0A0477219DB4660027C7D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A02DD72F7D62582FF6CA491 /* Pods-webServices.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		DD0A0478219DB4660027C7D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A62256FE4AA680CD59597F86 /* Pods-webServices.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
